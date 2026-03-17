@@ -16,8 +16,30 @@ To write a Python program to evaluate a **Taylor Series** using **recursion**, w
 
 ## 💻 PROGRAM:
 
-ADD CODE HERE
+# Reg.No: 212222210020
+# Name: Prithisha S
+
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+def taylor(x, n):
+    if n == 0:
+        return 1
+    return taylor(x, n - 1) + (x**n) / factorial(n)
+
+x = int(input("Enter x: "))
+n = int(input("Enter terms: "))
+
+print("Taylor Series:", taylor(x, n))
 
 ## OUTPUT
 
+Enter x: 1
+Enter terms: 5
+Taylor Series: 2.708333333333333
+
 ## RESULT
+
+The programs were implemented successfully and the outputs were verified.
