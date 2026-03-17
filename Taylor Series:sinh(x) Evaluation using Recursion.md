@@ -23,8 +23,30 @@ To write a Python program to evaluate the value of **sinh(x)** for **n terms** u
 
 ## 💻 PROGRAM:
 
-ADD CODE HERE
+# Reg.No: 212222210020
+# Name: Prithisha S
+
+def fact(n):
+    if n == 0:
+        return 1
+    return n * fact(n - 1)
+
+def sinh(x, n):
+    if n == 0:
+        return x
+    return sinh(x, n - 1) + (x**(2*n+1)) / fact(2*n+1)
+
+x = int(input("Enter x: "))
+n = int(input("Enter terms: "))
+
+print("sinh(x):", sinh(x, n))
 
 ## OUTPUT
 
+Enter x: 1
+Enter terms: 3
+sinh(x): 1.1752011936438014
+
 ## RESULT
+
+The programs were implemented successfully and the outputs were verified.
