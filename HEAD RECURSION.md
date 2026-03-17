@@ -20,24 +20,22 @@ To write a Python program to demonstrate **Head Recursion** by finding and print
 # Reg.No: 212222210020
 # Name: Prithisha S
 
-def palindrome(s):
-    if len(s) <= 1:
-        return True
-    if s[0] != s[-1]:
-        return False
-    return palindrome(s[1:-1])
+def head_recursion(n):
+    if n == 0:
+        return
+    head_recursion(n - 1)
+    print(n)
 
-s = input("Enter string: ")
-
-if palindrome(s):
-    print("Palindrome")
-else:
-    print("Not Palindrome")
+n = int(input("Enter number: "))
+head_recursion(n)
 
 ## OUTPUT
 
-Enter string: madam
-Palindrome
+1
+2
+3
+4
+5
 
 ## RESULT
 
